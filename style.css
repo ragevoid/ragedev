@@ -7,6 +7,7 @@
 body{
     font-family: 'Manrope', sans-serif;
     background-color: #E9E9E9;
+    height: 100vh;
 }
 
 .navegator{
@@ -38,7 +39,7 @@ body{
 .menu_navegator{
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
     /* display: none; */
     cursor: pointer;
 
@@ -58,6 +59,7 @@ body{
     background-color: #E9E9E9;
     gap: 10px;
     display: none;
+    font-size: 20px;
 }
 
 .links_navegator a{
@@ -84,6 +86,9 @@ body{
     -webkit-border-radius: 0 0 100px 100px;
     border-radius: 0 0 100px 100px;
     box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.25);
+}
+.logo_circle{
+    display: none;
 }
 
 .text_header{
@@ -133,7 +138,6 @@ body{
     font-family: Medula One;
     font-weight: 400;
     text-transform: uppercase;
-    word-wrap: break-word
 }
 .blue{
     color: #26577C;
@@ -191,6 +195,10 @@ body{
     padding: 10px 30px;
     color: white;
 }
+.paragraph_message{
+    font-size: 15px;
+    text-align: center;
+}
 
 
 .title_contact{
@@ -238,5 +246,150 @@ form{
 #submit{
     background-color: #E55604  ;
     color: white;
+
+}
+
+
+@media only screen and (min-width: 719px) {
+    .navegator{
+        padding: 15px 30px;
+        gap: 10px;  
+    }
+
+    .logo_navegator{
+        font-size: 80px;
+    }
+
+    .bar_menu{
+        width: 40px;
+        height: 7px;
+        background-color: #26577C;
+    }
+
+    .links_navegator{
+        font-size: 35px;
+    }
+
+    .circle_header{
+        width: 206px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 206px; 
+        background: #E55604;
+        -moz-border-radius: 100%;
+        -webkit-border-radius: 100%;
+        border-radius: 100%;
+        box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    .logo_circle{
+        display: block;
+        color: white;
+        font-size: 70px;
+        font-family: Medula One;
+        font-weight: 400;
+        word-wrap: break-word;
+    }
+    .logo_circle a{
+        color: white;
+        text-decoration: none;
+    }
+    .header {
+        padding: 10px 40px;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .text_header{
+        position: relative;
+        margin: 0;
+    }
+
+    .subtitle_text{
+        font-size: 45px;
+    }
+    
+    .paragraph_text{
+        font-size: 25px;
+    }
+    
+    .subparagraph_text{
+        font-size: 20px;
+
+    }
+
+.about{
+    padding: 20px 40px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.title_about, .title_portfolio, .title_contact{
+    font-size: 50px;
+    white-space: nowrap;
+}
+
+.paragraph_about{
+    font-size: 25px;
+}
+
+.portfolio{
+    padding: 20px 40px;
+    gap: 20px;
+}
+
+.title_portfolio{
+    align-self: flex-start;
+}
+
+.img_sample{
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+}
+
+.title_sample{
+    font-size: 25px;
+}
+.contact{
+    padding: 20px 40px;
+}
+.paragraph_message{
+    font-size: 30px;
+}
+
+.icons a img{
+    width: 40px;
+    height: 40px;
+}
+
+.icons{
+    gap: 30px;
+}
+
+#email{
+    height: 60px;
+}
+
+#message{
+    height: 150px;
+}
+
+#submit{
+    height: 60px;
+    width: 80%;
+}
+.form_element{
+    font-size: 30px;
+
+}
+
+form{
+    gap: 15px;
+}
 
 }
