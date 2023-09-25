@@ -23,9 +23,9 @@
             <div class="bar_menu"></div>
         </div>
         <div class="links_navegator" id="links_navegator">
-            <a href="#">Portfolio</a>
-            <a href="#">About Me</a>
-            <a href="#">Contact</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About Me</a>
+            <a href="#contact">Contact</a>
         </div>
     </div>
 
@@ -40,12 +40,21 @@
         <div class="circle_header"><span class="logo_circle"><a href="#">{Rage<span class="blue">Dev</span>}</a></span></div>
     </div>
 
+    <div class="header2">
+            <h2 class="subtitle_text">THIS IS A SUBTITLE IT HAS TO BE BIG</h2>
+            <div class="circle_header"><span class="logo_circle"><a href="#">{Rage<span class="blue">Dev</span>}</a></span></div>
+            <div class="text_header">
+                <p class="paragraph_text">This is a bunch of words to fill the void</p>
+                <p class="subparagraph_text">Another paragraph with words in it how cool</p>
+            </div>
+    </div>
+
     <div class="about" id="about">
         <h2 class="title_about"><span class="blue">{</span>ABOUT <span class="orange">ME</span><span class="blue">}</span></h2>
         <p class="paragraph_about">THIS IS A BUNCH OF TEXT TO EXPLAIN HOW I AM SO GOOD AND WHAT YOU SHOULD BE EXPECTING, ALSO SOME OF MY EXPERIENCE</p>
     </div>
 
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
         <h2 class="title_portfolio"><span class="blue">{</span>PORT<span class="orange">FOLIO</span><span class="blue">}</span></h2>
         <div class="samples_portfolio">
             <div class="sample_card">
@@ -63,7 +72,7 @@
         </div>
     </div>
     
-    <div class="contact">
+    <div class="contact" id="contact">
         <h2 class="title_contact">{CON<span class="orange">TACT</span>}</h2>
         <div class="message_contact">
             <p class="paragraph_message">This is a bunch of text so you can get in contact with me </p>
@@ -74,13 +83,13 @@
             </div>
         </div>
 
-    <div class="form">            
-        <form  action="#" method="post">
-            <input class="form_element" type="email" id="email" name="email" placeholder="email@example.com" required>
-            <textarea class="form_element" id="message" name="mensaje" placeholder="Write your petition. (Max 400 characters)" maxlength="400" required></textarea>
-            <input  class="form_element" type="submit" id="submit" value="Submit">
-        </form>
-    </div>
+        <div class="form">            
+            <form  action="#" method="post">
+                <input class="form_element" type="email" id="email" name="email" placeholder="email@example.com" required>
+                <textarea class="form_element" id="message" name="mensaje" placeholder="Write your petition. (Max 400 characters)" maxlength="400" required></textarea>
+                <input  class="form_element" type="submit" id="submit" value="Submit">
+            </form>
+        </div>
     </div>
     
 <script>
@@ -92,18 +101,17 @@ function toggleMenu() {
     let menu_navegator = document.getElementById("menu_navegator")
     let navegator = document.getElementById("navegator")
     if (menuVisible) {
-        links_navegator.style.display = "none";
-        logo_navegator.style.display= "block"
-        navegator.style.display= "flex"
+        links_navegator.classList.remove("links_navegator_clicked");
+        logo_navegator.classList.remove("logo_navegator_clicked");
+        navegator.classList.remove("navegator_clicked");
+        menu_navegator.classList.remove("menu_navegator_clicked");
         menuVisible = false;
     } else {
-
-        links_navegator.style.display = "flex";
-        logo_navegator.style.display= "none"
-        navegator.style.display= "block"
         menuVisible = true;
-        menu_navegator.style.position = "absolute"
-        menu_navegator.style.right = "26px"
+        links_navegator.classList.add("links_navegator_clicked");
+        logo_navegator.classList.add("logo_navegator_clicked");
+        navegator.classList.add("navegator_clicked");    
+        menu_navegator.classList.add("menu_navegator_clicked");
         
 
     }
